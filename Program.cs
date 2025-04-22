@@ -1,7 +1,12 @@
 var builder = WebApplication.CreateBuilder(args);
+{
+    // configure services (dependency injection)
 
-builder.Services.AddControllers();
+}
 
 var app = builder.Build();
-app.MapControllers();
+{
+    // configure request pipeline
+}
+
 app.Run();
