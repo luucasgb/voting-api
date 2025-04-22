@@ -1,0 +1,7 @@
+GET {{host}}/polls
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "query": "SELECT * FROM polls"
+}

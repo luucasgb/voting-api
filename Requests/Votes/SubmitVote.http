@@ -1,0 +1,8 @@
+POST {{host}}/polls/{{pollId}}/votes
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+    "OptionId": "{{optionId}}",
+    "IsAnonymous": true
+}
