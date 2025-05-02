@@ -1,7 +1,5 @@
-GET {{host}}/polls
-Authorization: Bearer {{token}}
-Content-Type: application/json
+### GetPolls.http
 
-{
-    "query": "SELECT * FROM polls"
-}
+GET {{$processEnv HTTP_HOST}}/polls
+Authorization: Bearer {{$processEnv HTTP_TOKEN}}
+Accept: application/json

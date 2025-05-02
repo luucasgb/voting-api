@@ -3,19 +3,13 @@ Authorization: Bearer {{token}}
 Content-Type: application/json
 
 {
-    "Name": "Poll Name",
-    "Description": "Poll Description",
+    "Name": "Favorite Framework",
+    "Description": "Which framework do you prefer?",
     "Options": [
-        {
-            "Name": "Option 1",
-            "Description": "Option 1 Description"
-        },
-        {
-            "Name": "Option 2",
-            "Description": "Option 2 Description"
-        }
+        { "Name": "ASP.NET", "Description": "Microsoft's framework" },
+        { "Name": "Express.js", "Description": "Node.js framework" }
     ],
     "StartDate": "2023-10-01T00:00:00Z",
     "EndDate": "2023-10-31T23:59:59Z",
-    "IsAnonymous": true,
+    "IsAnonymous": true
 }

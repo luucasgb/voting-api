@@ -1,0 +1,1 @@
+﻿public record VoteDto(Guid OptionId, bool IsAnonymous);

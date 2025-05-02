@@ -1,0 +1,31 @@
+services:
+  db:
+    image: postgres:16
+    container_name: voting_db
+    environment:
+      POSTGRES_USER: youruser
+      POSTGRES_PASSWORD: yourpassword
+      POSTGRES_DB: votingdb
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    networks:
+      - voting-network
+
+  api:
+    build: .  # Points to your Dockerfile's directory
+    container_name: voting_api
+    ports:
+      - "5000:80"  # Map host port 5000 to container port 80 (ASP.NET default)
+    environment:
+      ConnectionStrings__Default: "Host=db;Database=votingdb;Username=admin;Password=admin"
+    depends_on:
+      - db
+    networks:
+      - voting-network
+
+volumes:
+  pgdata:
+
+networks:
+  voting-network:
+    driver: bridge

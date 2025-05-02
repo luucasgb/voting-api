@@ -1,7 +1,2 @@
 GET {{host}}/polls/{{pollId}}
 Authorization: Bearer {{token}}
-Content-Type: application/json
-
-{
-    "query": "SELECT * FROM polls where pollId = {{pollId}}" 
-}
